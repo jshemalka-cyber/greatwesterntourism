@@ -1,53 +1,114 @@
 
+/* === Great Western Tourism — Theme bound to logo colors ===
+   Brand Green  : #006838
+   Accent Orange: #F37021
+*/
 :root{
-  --brand:#006838;
-  --accent:#F37021;
-  --text:#222;
-  --bg:#fdfdfd;
+  --brand:#006838;          /* primary pulled from logo */
+  --brand-700:#04582F;
+  --brand-300:#5fa77f;
+
+  --accent:#F37021;         /* secondary pulled from logo */
+  --accent-700:#d85f1a;
+  --accent-300:#f8a36d;
+
+  --ink:#222;               /* body text */
+  --muted:#666;
+  --bg:#FAF7F2;             /* subtle warm paper to match logo vibe */
+  --surface:#FFFFFF;
+
+  --ring: color-mix(in oklab, var(--accent) 55%, transparent);
+  --shadow: 0 6px 18px rgba(0,0,0,.06);
 }
+
+/* Reset / base */
 *{box-sizing:border-box}
+html,body{margin:0;padding:0}
 body{
-  margin:0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Open Sans", Arial, sans-serif;
-  color:var(--text);
+  color:var(--ink);
   background:var(--bg);
+  line-height:1.55;
 }
 a{color:var(--brand);text-decoration:none}
+a:hover{color:var(--accent)}
+img{max-width:100%;display:block}
+
+/* Layout helpers */
 .container{max-width:1100px;margin:0 auto;padding:0 16px}
+.grid{display:grid;gap:18px}
+@media(min-width:768px){
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+}
+
+/* Top bar */
 .header{
-  background:#fff;
+  background:var(--surface);
   box-shadow:0 2px 8px rgba(0,0,0,.05);
 }
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
 .brand{display:flex;align-items:center; gap:12px}
-.brand img{width:52px;height:52px;object-fit:contain;border-radius:6px}
-.brand h1{margin:0;font-size:20px;color:var(--brand);}
+.brand img{width:56px;height:56px;object-fit:contain;border-radius:8px}
+.brand h1{margin:0;font-size:22px;color:var(--brand)}
 .brand p{margin:2px 0 0;color:var(--accent);font-size:12px;letter-spacing:.04em}
-.navlinks a{font-weight:600;margin-left:18px}
+
+.navlinks a{font-weight:600;margin-left:18px;padding:6px 0;position:relative}
 .navlinks a:hover{color:var(--accent)}
-.hero{padding:56px 0;text-align:center}
-.hero h2{color:var(--brand);font-size:32px;margin:0 0 8px}
-.hero p{color:#555;margin:0}
-.grid{display:grid;gap:18px}
-@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)} .grid-2{grid-template-columns:repeat(2,1fr)}}
+.navlinks a.active::after{
+  content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;background:var(--accent);border-radius:999px
+}
+
+/* Hero */
+.hero{
+  padding:70px 0;
+  text-align:center;
+  background:
+    radial-gradient(1200px 400px at 50% -100px, color-mix(in oklab, var(--accent) 18%, transparent) 0%, transparent 60%),
+    linear-gradient(0deg, #fff0, #fff0 60%, color-mix(in oklab, var(--accent) 6%, #fff) 100%);
+}
+.hero h2{color:var(--brand);font-size:34px;margin:0 0 10px}
+.hero p{color:#444;margin:0}
+
+/* Cards */
 .card{
-  background:#fff;border-radius:12px;overflow:hidden;
-  box-shadow:0 6px 18px rgba(0,0,0,.06);
+  background:var(--surface);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);
+  border:1px solid color-mix(in oklab, var(--brand) 8%, #0000);
 }
-.card img{width:100%;height:180px;object-fit:cover}
-.card .p{padding:14px}
-.badge{display:inline-block;background:#eef7f0;color:var(--brand);padding:4px 10px;border-radius:999px;font-size:12px;margin-right:8px}
-.price{font-weight:700}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 16px;border-radius:10px;font-weight:700}
-.btn:hover{background:#d85f1a}
-.section{padding:40px 0}
-.footer{margin-top:32px;border-top:1px solid #eee;background:#fff}
-.footer .inner{padding:18px;text-align:center;color:#666;font-size:14px}
-input, textarea{
-  width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;margin:6px 0 12px;font-size:15px
+.card img{width:100%;height:190px;object-fit:cover}
+.card .p{padding:16px}
+.badge{
+  display:inline-block;background:color-mix(in oklab, var(--brand) 10%, #fff);
+  color:var(--brand);padding:4px 10px;border-radius:999px;font-size:12px;margin-right:8px
 }
-iframe{border:0}
-.table{width:100%;border-collapse:separate;border-spacing:0 10px}
-.table .row{display:flex;justify-content:space-between;gap:10px;background:#fff;border:1px solid #eee;border-radius:10px;padding:12px}
-.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.price{font-weight:800;color:var(--brand-700)}
+.card h3{margin:6px 0 6px;color:var(--ink)}
 .small{font-size:12px;color:#777}
+
+/* Buttons */
+.btn{
+  display:inline-block;background:var(--accent);color:#fff;padding:11px 16px;border-radius:12px;
+  font-weight:800;border:0;box-shadow:0 4px 12px color-mix(in oklab, var(--accent) 30%, transparent);
+  transition:transform .08s ease, box-shadow .2s ease, background .2s ease;
+}
+.btn:hover{background:var(--accent-700);transform:translateY(-1px)}
+.btn:focus{outline:3px solid var(--ring);outline-offset:2px}
+
+/* Sections & footer */
+.section{padding:42px 0}
+.footer{margin-top:32px;border-top:1px solid #eee;background:var(--surface)}
+.footer .inner{padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+/* Forms & tables (for other pages) */
+input, textarea{
+  width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:12px;margin:6px 0 12px;font-size:15px;
+  background:#fff
+}
+input:focus, textarea:focus{border-color:var(--brand-300);outline:3px solid var(--ring)}
+.table{width:100%;border-collapse:separate;border-spacing:0 10px}
+.table .row{display:flex;justify-content:space-between;gap:10px;background:#fff;border:1px solid #eee;border-radius:12px;padding:12px}
+
+/* Gallery grid (for gallery.html) */
+.gallery{display:grid;gap:16px}
+@media(min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}
+.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}
