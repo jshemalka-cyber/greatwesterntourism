@@ -1,5 +1,3 @@
-Place your tour images here. Example filenames used in HTML:
-- cultural.jpg
-- hill.jpg
-- coastal.jpg
-- gallery1.jpg ... gallery6.jpg
+Background image path: assets/images/bg-map.jpg (configured in styles.css body background).
+Upload all files to repo root.
+Place p22.jpg at root for logo.
