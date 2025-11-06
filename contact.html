@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Great Western Tourism — Sri Lanka</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">
+      <img src="assets/images/logo.png" alt="Great Western Tourism logo">
+      <div>
+        <h1>Great Western Tourism</h1>
+        <p>Company Sri Lanka</p>
+      </div>
+    </div>
+    <nav class="navlinks">
+      <a href="index.html" >Home</a>
+      <a href="tours.html" >Tours</a>
+      <a href="about.html" >About</a>
+      <a href="gallery.html" >Gallery</a>
+      <a href="contact.html" style='color:var(--accent)'>Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container grid grid-2">
+    <div>
+      <h2 style="color:var(--brand);margin:0 0 8px">Contact Us</h2>
+      <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you.');" class="card" style="padding:16px">
+        <input placeholder="Your Name" required>
+        <input placeholder="Your Email" type="email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </div>
+    <div>
+      <div class="card" style="padding:16px;margin-bottom:16px">
+        <p>📧 info@greatwesterntourism.lk</p>
+        <p>☎️ +94 77 123 4567</p>
+        <p>💬 WhatsApp: +94 77 123 4567</p>
+        <p>📍 45 Galle Road, Colombo, Sri Lanka</p>
+      </div>
+      <div class="card" style="overflow:hidden">
+        <iframe
+          src="https://www.google.com/maps?q=Colombo,+Sri+Lanka&output=embed"
+          width="100%"
+          height="260"
+          loading="lazy"
+          aria-label="Map of Colombo"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container inner">© 2025 Great Western Tourism — All rights reserved.</div>
+</footer>
+</body>
+</html>
