@@ -1,4 +1,3 @@
-
 /* === Great Western Tourism — Theme bound to logo colors ===
    Brand Green  : #006838
    Accent Orange: #F37021
@@ -55,6 +54,7 @@ img{max-width:100%;display:block}
 
 .navlinks a{font-weight:600;margin-left:18px;padding:6px 0;position:relative}
 .navlinks a:hover{color:var(--accent)}
+.navlinks a[style*="var(--accent)"]::after,
 .navlinks a.active::after{
   content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;background:var(--accent);border-radius:999px
 }
