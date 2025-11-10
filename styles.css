@@ -1,30 +1,3 @@
-
-:root{--brand:#006838;--brand-700:#04582F;--brand-300:#5fa77f;--accent:#F37021;--accent-700:#d85f1a;--accent-300:#f8a36d;--ink:#222;--muted:#444;--surface:rgba(255,255,255,.92);--surface-strong:rgba(255,255,255,.97);--ring:color-mix(in oklab,var(--accent) 55%,transparent);--shadow:0 6px 18px rgba(0,0,0,.08)}
-*{box-sizing:border-box}html,body{margin:0;padding:0}
-body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Open Sans",Arial,sans-serif;color:var(--ink);line-height:1.55;min-height:100vh;background:linear-gradient(0deg,rgba(0,0,0,.35),rgba(0,0,0,.35)),url('assets/images/bg-map.jpg?v=4') center/cover no-repeat fixed}
-a{color:var(--brand);text-decoration:none}a:hover{color:var(--accent)}img{max-width:100%;display:block}
-.container{max-width:1100px;margin:0 auto;padding:0 16px}.grid{display:grid;gap:18px}
-@media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}}
-.header{background:var(--surface-strong);-webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px);box-shadow:0 2px 10px rgba(0,0,0,.06)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
-.brand{display:flex;align-items:center;gap:12px}.brand img{width:56px;height:56px;object-fit:contain;border-radius:8px;background:#fff}
-.brand h1{margin:0;font-size:22px;color:var(--brand)}.brand p{margin:2px 0 0;color:var(--accent);font-size:12px;letter-spacing:.04em}
-.navlinks a{font-weight:600;margin-left:18px;padding:6px 0;position:relative}.navlinks a:hover{color:var(--accent)}
-.navlinks a.active::after{content:"";position:absolute;left:0;right:0;bottom:-10px;height:3px;background:var(--accent);border-radius:999px}
-.hero{padding:70px 0;text-align:center}.hero h2{color:var(--brand);font-size:34px;margin:0 0 10px;text-shadow:0 1px 0 rgba(255,255,255,.7)}.hero p{color:#f3f3f3;margin:0;text-shadow:0 1px 0 rgba(0,0,0,.25)}
-.card{background:var(--surface);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);border:1px solid color-mix(in oklab,var(--brand) 8%,#0000)}.card img{width:100%;height:190px;object-fit:cover}.card .p{padding:16px}
-.badge{display:inline-block;background:color-mix(in oklab,var(--brand) 10%,#fff);color:var(--brand);padding:4px 10px;border-radius:999px;font-size:12px;margin-right:8px}
-.price{font-weight:800;color:var(--brand-700)}.card h3{margin:6px 0 6px}.small{font-size:12px;color:#555}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:11px 16px;border-radius:12px;font-weight:800;border:0;box-shadow:0 4px 12px color-mix(in oklab,var(--accent) 30%,transparent);transition:transform .08s ease,box-shadow .2s ease,background .2s ease}
-.btn:hover{background:var(--accent-700);transform:translateY(-1px)}.btn:focus{outline:3px solid var(--ring);outline-offset:2px}
-.section{padding:42px 0}.footer{margin-top:32px;border-top:1px solid #eee;background:var(--surface-strong);-webkit-backdrop-filter:saturate(140%) blur(6px);backdrop-filter:saturate(140%) blur(6px)}.footer .inner{padding:18px;text-align:center;color:#333;font-size:14px}
-input,textarea{width:100%;padding:10px;border:1px solid #e6e6e6;border-radius:12px;margin:6px 0 12px;font-size:15px;background:#fff}
-input:focus,textarea:focus{border-color:var(--brand-300);outline:3px solid var(--ring)}
-.table{width:100%;border-collapse:separate;border-spacing:0 10px}.table .row{display:flex;justify-content:space-between;gap:10px;background:#fff;border:1px solid #eee;border-radius:12px;padding:12px}
-.gallery{display:grid;gap:16px}@media(min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}.gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}
-.flag-fixed{position:fixed;top:10px;right:10px;width:80px;height:auto;z-index:10000;pointer-events:none;filter:drop-shadow(0 3px 8px rgba(0,0,0,.25))}
-@media (max-width:640px){.flag-fixed{width:56px;top:8px;right:8px}}
-@media (prefers-reduced-motion: reduce){.flag-fixed{display:none}}
 :root{
   --brand:#006838;          /* deep green */
   --brand-700:#04582F;
@@ -153,4 +126,3 @@ input:focus, textarea:focus{border-color:var(--brand-300);outline:3px solid var(
 @media (prefers-reduced-motion: reduce){
   .flag-fixed{ display: none; }
 }
-
