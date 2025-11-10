@@ -112,3 +112,6 @@ input:focus, textarea:focus{border-color:var(--brand-300);outline:3px solid var(
 .gallery{display:grid;gap:16px}
 @media(min-width:768px){.gallery{grid-template-columns:repeat(3,1fr)}}
 .gallery img{width:100%;height:220px;object-fit:cover;border-radius:12px}
+.hero h2 { color:#fff; text-shadow:0 1px 0 rgba(0,0,0,.3); }
+.hero p  { color:#f3f3f3; text-shadow:0 1px 0 rgba(0,0,0,.25); }
+
